@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>solutions Vedeos</title>
+</head>
+<link rel="stylesheet" href="2019.css">
+ <link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+<body>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      
+    }
+    html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+    .navbar {
+      height: 50px;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid aqua;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    #back {
+      font-size: 30px;
+    }
+
+    #dot {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 50px);
+      border: none;
+      display: block;
+    }
+    
+    
+    button{
+      display:flex;
+    height:70px;
+    width:350px;
+    align-items: center ;
+  justify-content:space-between;
+  background-color:#000;
+  border:2px solid aqua;
+  border-radius: 20px;
+    }
+    .box{margin-top:20px;
+      display: flex;
+      justify-content: center;
+    
+      
+    }
+    #book-icon{
+      color:aqua;
+      font-size:50px;
+      margin-left:10px;
+    }
+    #left{
+      font-size:40px;
+      color :#000;
+      color :#fff;
+    }
+    .khat{
+      font-size:40px;
+      color :#fff;
+    }
+    
+    .khat1{
+      font-size:30px ;
+      color:#fff;
+      display:flex;
+      margin-top:10px;
+    }
+    
+    .khat2{
+      font-size:28px ;
+      color:#fff;
+    }
+    .boxes{
+      
+    }
+    #lok {
+  width: calc(100% - 90px);
+  height:120px;
+  margin: 10px auto 0;
+  text-align: center;
+  background-color: #000;
+display:flex;
+justify-content: center;
+  flex-direction: column;
+  border:2px solid aqua ;
+  border-radius:30px;
+  
+}
+    
+    .video{color:red;
+  font-weight:bold;
+      font-size:30px;
+    }
+    h1{color:aqua;
+    margin-top:10px;
+    
+    }
+    img{
+      height:50px;
+      margin-left:18px;
+    }
+
+
+
+
+
+
+
+
+.pepar{
+    position : absolute;
+    top:50px;
+    bottom :px;
+    right:150px;
+    font-size: 30px;
+    font-weight:bold;
+    color :#fff;
+    
+}
+
+
+#pdf{height:60px;
+width:70px;
+  
+}
+
+    .pdf2{
+      display:flex;
+      justify-content: center;
+    }
+    text{
+      color:blue;
+    }
+    #back{
+      margin-left:6px;
+    }
+    
+    
+    
+    #download{position: absolute;
+    left:80px;
+      font-size: 40px;
+    }
+    .khat5{margin-left:50px;
+      font-size:25px ;
+      color:#fff;
+      display:flex;
+      justify-content: space-between;
+    }
+    .khat1{
+      margin-left: 50px;
+    }
+    
+    
+      .khat4{margin-left:55px;
+      font-size:22px ;
+      color:#fff;
+      display:flex;
+      justify-content: space-between;
+    }
+      /* RESPONSIVE MORE MENU */
+    .more-menu {
+      position: absolute;
+      top: 50px;
+      right: 8px;
+      width: 190px;
+      background: #000;
+      border: 2px solid aqua;
+      border-radius: 12px;
+      display: none;
+      overflow: hidden;
+      z-index: 2000;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    }
+
+    .more-menu a {
+      display: block;
+      width: 100%;
+      padding: 14px 16px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      border-bottom: 1px solid aqua;
+    }
+
+    .more-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .more-menu a:hover {
+      background: #111;
+      color: aqua;
+    }
+
+  </style>
+    <div class="navbar">
+
+  <a href="index.html">  <span id="back" class="material-symbols-outlined">
+      arrow_back
+    </span></a>
+
+   <a href="index.html"> <span id="home" class="material-symbols-outlined">
+      home
+    </span></a>
+
+  <a href="#">  <span id="heart" class="material-symbols-outlined">
+      heart_plus
+    </span>
+    
+    </a>
+
+    <a href="#"><span id="dot" class="material-symbols-outlined">
+      more_vert
+    </span>
+</a>
+   
+  </div>
+  
+
+
+ <div id="lok">
+    <p class="video"><text>Pepar</text> Pdfs</p>
+    <div class="pdf2">
+    <h1>2019</h1>
+    <img id="pdf" src="img4.png">
+    </div>
+  </div>
+  
+
+  <div class="boxes">
+  <div class="box">
+    <button>
+      
+<img src="img2.png" >
+
+
+<div class="khat1">
+   Urdu - اردو
+
+ <a href="history_march_2024.pdf" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  <div class="box">
+    <button>
+      
+      <img src="img2.png" >
+
+<div class="khat5">
+English - انگریزی
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+    <div class="box">
+    <button>
+      
+       <img src="img2.png" >
+<div class="khat5">
+  Marathi - مراٹھی
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+  <div class="box">
+    <button>
+      
+       <img src="img2.png" >
+<div class="khat1">
+  Hindi - ھندی
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>  
+  
+  
+    <div class="box">
+    <button>
+      
+       <img src="img2.png" >
+<div class="khat5">
+Math - ریاضی 1
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+  
+    <div class="box">
+    <button>
+      
+      <img src="img2.png" >
+<div class="khat5">
+Math - ریاضی 2
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+  
+    <div class="box">
+    <button>
+      
+       <img src="img2.png" >
+<div class="khat5">
+Science - سانٔس 1
+ <a href=""> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#" download><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+  
+  
+    <div class="box">
+    <button>
+      
+      <img src="img2.png" >
+<div class="khat5">
+  Science - سانٔس 2
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+  
+  
+    <div class="box">
+    <button>
+      
+      <img src="img2.png" >
+<div class="khat4">
+
+Geography - جغرافیہ
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+    <div class="box">
+    <button>
+      
+       <img src="img2.png" >
+<div class="khat5">
+History - تاریخ
+ <a href="" download> <span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+</div>
+<a href="#"><span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+    </button>
+    </div>
+    
+  </div>
+  
+ 
+  </div>
+  
+  
+   
+</body>
+
+</html>
