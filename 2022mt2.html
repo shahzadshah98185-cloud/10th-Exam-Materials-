@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>urdu.pdf</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #111;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      height: 50px;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid aqua;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    #back {
+      font-size: 30px;
+    }
+
+    #dot {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    /* PDF */
+    #pdf-container {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 10px auto;
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <a href="2022.html">
+      <span id="back" class="material-symbols-outlined">
+        arrow_back
+      </span>
+    </a>
+
+    <a href="index.html">
+      <span id="home" class="material-symbols-outlined">
+        home
+      </span>
+    </a>
+
+    <span id="heart" class="material-symbols-outlined">
+      heart_plus
+    </span>
+
+    <span id="dot" class="material-symbols-outlined">
+      more_vert
+    </span>
+
+  </div>
+
+
+  <!-- PDF -->
+  <div id="pdf-container"></div>
+
+
+  <!-- PDF.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <script>
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+    const pdfFile = "maths_2_march_2022.pdf";
+
+    pdfjsLib.getDocument(pdfFile).promise.then(function(pdf) {
+
+      const container = document.getElementById("pdf-container");
+
+      for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+
+        pdf.getPage(pageNumber).then(function(page) {
+
+          const scale = 1.5;
+
+          const viewport = page.getViewport({
+            scale: scale
+          });
+
+          const canvas = document.createElement("canvas");
+
+          const context = canvas.getContext("2d");
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          container.appendChild(canvas);
+
+          page.render({
+            canvasContext: context,
+            viewport: viewport
+          });
+
+        });
+
+      }
+
+    }).catch(function(error) {
+
+      document.getElementById("pdf-container").innerHTML =
+        "<p style='color:white;text-align:center;'>" +
+        "PDF open nahi ho rahi: " +
+        error.message +
+        "</p>";
+
+    });
+
+  </script>
+
+</body>
+
+</html>
