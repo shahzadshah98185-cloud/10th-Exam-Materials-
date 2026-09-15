@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Pepar solves Videos</title>
+</head>
+
+<link rel="stylesheet" href="2019.css">
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+<body>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  height: 50px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid aqua;
+}
+
+span {
+  color: #fff;
+}
+
+#back {
+  font-size: 30px;
+}
+
+#dot {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 50px);
+  border: none;
+  display: block;
+}
+
+button {
+  display:flex;
+  height:70px;
+  width:350px;
+  align-items: center;
+  justify-content:space-between;
+  background-color:#000;
+  border:2px solid aqua;
+  border-radius: 20px;
+}
+
+.box {
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+}
+
+#book-icon {
+  color:aqua;
+  font-size:50px;
+  margin-left:10px;
+}
+
+#left {
+  font-size:40px;
+  color:#000;
+  color:#fff;
+}
+
+.khat {
+  font-size:40px;
+  color:#fff;
+}
+
+.khat1 {
+  font-size:30px;
+  color:#fff;
+  display:flex;
+  margin-top:10px;
+}
+
+.khat2 {
+  font-size:28px;
+  color:#fff;
+}
+
+.boxes {
+}
+
+#lok {
+  width: calc(100% - 90px);
+  height:120px;
+  margin: 10px auto 0;
+  text-align: center;
+  background-color: #000;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  border:2px solid aqua;
+  border-radius:30px;
+}
+
+.video {
+  color:red;
+  font-weight:bold;
+  font-size:30px;
+}
+
+h1 {
+  color:aqua;
+  margin-top:10px;
+}
+
+img {
+  height:50px;
+  margin-left:18px;
+}
+
+.pepar {
+  position:absolute;
+  top:50px;
+  bottom:px;
+  right:150px;
+  font-size:30px;
+  font-weight:bold;
+  color:#fff;
+}
+
+#pdf {
+  height:60px;
+  width:70px;
+}
+
+.pdf2 {
+  display:flex;
+  justify-content:center;
+}
+
+text {
+  color:blue;
+}
+
+#back {
+  margin-left:6px;
+}
+
+#download {
+  position:absolute;
+  left:80px;
+  font-size:40px;
+}
+
+.khat5 {
+  margin-left:50px;
+  font-size:25px;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+}
+
+.khat1 {
+  margin-left:50px;
+}
+
+.khat4 {
+  margin-left:55px;
+  font-size:22px;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+}
+
+
+/* =================================
+   SIRF MORE MENU KA CSS
+   ================================= */
+
+.more-menu {
+  position: absolute;
+  top: 50px;
+  right: 8px;
+  width: 190px;
+  background: #000;
+  border: 2px solid aqua;
+  border-radius: 12px;
+  display: none;
+  overflow: hidden;
+  z-index: 2000;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+.more-menu a {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 1px solid aqua;
+}
+
+.more-menu a:last-child {
+  border-bottom: none;
+}
+
+.more-menu a:hover {
+  background: #111;
+  color: aqua;
+}
+a{
+  text-decoration: none;
+  color:#fff;
+}
+</style>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+  <a href="index.html">
+    <span id="back" class="material-symbols-outlined">
+      arrow_back
+    </span>
+  </a>
+
+  <a href="index.html">
+    <span id="home" class="material-symbols-outlined">
+      home
+    </span>
+  </a>
+
+  <a href="#">
+    <span id="heart" class="material-symbols-outlined">
+      heart_plus
+    </span>
+  </a>
+
+  <!-- MORE BUTTON -->
+
+  <a href="javascript:void(0)" onclick="toggleMenu()">
+    <span id="dot" class="material-symbols-outlined">
+      more_vert
+    </span>
+  </a>
+
+</div>
+
+
+<!-- MORE MENU -->
+
+<div class="more-menu" id="moreMenu">
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="#">
+    Question Papers
+  </a>
+
+  <a href="#">
+    Pepar Solve Video
+  </a>
+
+  <a href="#">
+    Subjects Notes
+  </a>
+
+  <a href="#">
+    Books
+  </a>
+
+  <a href="#">
+    About Us
+  </a>
+
+</div>
+
+
+<div id="lok">
+
+  <p class="video">
+    <text>Pepar</text> Pattern
+  </p>
+
+  <div class="pdf2">
+    <h1>Videos</h1>
+       <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+  </div>
+
+</div>
+
+
+<div class="boxes">
+
+<div class="box">
+
+<a href="🔥Urdu_Medium_Urdu_Question_Paper_Pattern_2026-27_✅Class_9th_and_10th_Maharashtra_board_💫(360p).mp4"><button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat1">
+Urdu - اردو
+
+<a href="🔥Urdu_Medium_Urdu_Question_Paper_Pattern_2026-27_✅Class_9th_and_10th_Maharashtra_board_💫(360p).mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="🔥Urdu_Medium_Urdu_Question_Paper_Pattern_2026-27_✅Class_9th_and_10th_Maharashtra_board_💫(360p).mp4">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button></a>
+</div>
+
+
+<div class="box">
+  <a href="80_Marks_🔥_English_Paper_Presentation___Write_a_paper_like_topper___Class_10th___Mh_boards__(360p).mp4">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+English - انگریزی
+
+<a href="80_Marks_🔥_English_Paper_Presentation___Write_a_paper_like_topper___Class_10th___Mh_boards__(360p).mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="ptne.html">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button></a>
+</div>
+
+
+<div class="box">
+  <a href="ssc_tenth_दहावी__दसवीं_-march_2020-_Marathi__LL__-_80_marks_paper_discussion_with_suggestions(360p).mp4">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+Marathi - مراٹھی
+
+<a href="ssc_tenth_दहावी__दसवीं_-march_2020-_Marathi__LL__-_80_marks_paper_discussion_with_suggestions(360p).mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="ssc_tenth_दहावी__दसवीं_-march_2020-_Marathi__LL__-_80_marks_paper_discussion_with_suggestions(360p).mp4">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+<a href="Previous_Year_Question_Paper__HINDI_Composite__40_Marks___SSC_Board_2020___Question_Paper___Solution(360p).mp4">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat1">
+Hindi - ھندی
+
+<a href="Previous_Year_Question_Paper__HINDI_Composite__40_Marks___SSC_Board_2020___Question_Paper___Solution(360p).mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="Previous_Year_Question_Paper__HINDI_Composite__40_Marks___SSC_Board_2020___Question_Paper___Solution(360p).mp4">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+  <a href="10th_Algebra_March_2026_Guess_Paper_Urdu_Medium_State_Board_Easy_Questions_for_Success(360p).mp4">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+Math - ریاضی 1
+
+<a href="10th_Algebra_March_2026_Guess_Paper_Urdu_Medium_State_Board_Easy_Questions_for_Success(360p).mp4"download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="10th_Algebra_March_2026_Guess_Paper_Urdu_Medium_State_Board_Easy_Questions_for_Success(360p).mp4">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+  <a href="ptnmt2.html">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+Math - ریاضی 2
+
+<a href="pvmt2.mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="ptnmt2.html">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+  <a href="10th_Science-1_March_2025_Guess_Paper_Urdu_Medium_State_Board_Question_Answer_سائنس_اول_حل_شدہ_پرچہ(360p).mp4">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+Science - سانٔس 1
+
+<a href="10th_Science-1_March_2025_Guess_Paper_Urdu_Medium_State_Board_Question_Answer_سائنس_اول_حل_شدہ_پرچہ(360p).mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="10th_Science-1_March_2025_Guess_Paper_Urdu_Medium_State_Board_Question_Answer_سائنس_اول_حل_شدہ_پرچہ(360p).mp4">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+  <a href="ptns2.html">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+Science - سانٔس 2
+
+<a href="pvs2.mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="ptns2.html">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+  <a href="ptng.html">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat4">
+
+Geography - جغرافیہ
+
+<a href="ptng.mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="ptng.html">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</div>
+
+
+<div class="box">
+  <a href="ptnHi.html">
+<button>
+
+   <span id="book-icon" class="material-symbols-outlined">
+books_movies_and_music
+</span>
+
+<div class="khat5">
+History - تاریخ
+
+<a href="pvHi.mp4" download>
+<span id="download" class="material-symbols-outlined">
+download
+</span>
+</a>
+
+</div>
+
+<a href="ptnHi.html">
+<span id="left" class="material-symbols-outlined">
+chevron_right
+</span>
+</a>
+
+</button>
+</a>
+</div>
+
+</div>
+
+
+<!-- MORE MENU JAVASCRIPT -->
+
+<script>
+
+function toggleMenu() {
+
+  const menu = document.getElementById("moreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+
+}
+
+
+/* Menu ke bahar click karne par close */
+
+document.addEventListener("click", function(event) {
+
+  const menu = document.getElementById("moreMenu");
+  const dot = document.getElementById("dot");
+
+  if (
+    !menu.contains(event.target) &&
+    event.target !== dot
+  ) {
+    menu.style.display = "none";
+  }
+
+});
+
+</script>
+
+</body>
+
+</html>
